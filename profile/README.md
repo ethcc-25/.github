@@ -1,6 +1,6 @@
 # 🌍 World App - DeFi Yield Optimization Platform
 
-![CCTP2 Architecture Diagram](./assets/cctp2-architecture-diagram.png)
+![CCTP2 Architecture Diagram](https://i.postimg.cc/BnX2cV16/Screenshot-2025-07-06-at-06-21-35.png)
 
 > **A World Mini App to farm the best yield on the Earth**
 
