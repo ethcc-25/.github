@@ -1,56 +1,16 @@
-# 🌍 World App - DeFi Yield Optimization Platform
+# 🌍 Monde - DeFi Yield Optimization Platform
 
-![CCTP2 Architecture Diagram](https://i.postimg.cc/BnX2cV16/Screenshot-2025-07-06-at-06-21-35.png)
 
-> **A World Mini App to farm the best yield on the Earth**
+ **A World Mini App to farm the best yield on the Earth**
 
-- [Circle Developer Documentation](https://developers.circle.com/)
+![Texte alternatif](https://i.postimg.cc/BnX2cV16/Screenshot-2025-07-06-at-06-21-35.png)
 
-World is a comprehensive DeFi yield optimization platform that automatically finds and manages the best yield opportunities across multiple EVM chains using Circle's Cross-Chain Transfer Protocol (CCTP) for seamless cross-chain operations.
 
-## 📋 Bounty Submission Criteria
-
-Submissions will be evaluated based on the following parameters:
-
-### ✅ Required Components
-
-1. **Functional MVP and Diagram**
-   - Working frontend application
-   - Backend infrastructure
-   - Architecture diagram (see above)
-
-2. **Video Demonstration + Presentation**
-   - Succinct outline of core functions
-   - Effective use of Circle's Developer tools/tech
-   - Detailed documentation support
-
-3. **Repository Link**
-   - GitHub or Replit repository
-   - Clean, well-documented code
-   - Easy setup and deployment instructions
-
-## 📚 Documentation Structure
-
-```
-docs/
-├── README.md                 # This file
-├── assets/                   # Images and diagrams
-├── contract_addresses/       # Official contract addresses
-│   ├── README.md            # Contract documentation
-│   ├── yield-manager-contracts.ts
-│   ├── cctp-contracts.ts
-│   └── index.ts
-├── architecture/             # Architecture documentation
-├── api/                      # API documentation
-├── contracts/                # Smart contract documentation
-├── frontend/                 # Frontend implementation guide
-├── backend/                  # Backend implementation guide
-└── examples/                 # Code examples and tutorials
-```
+Monde is a comprehensive DeFi yield optimization platform that automatically finds and manages the best yield opportunities across multiple EVM chains using Circle's Cross-Chain Transfer Protocol (CCTP) for seamless cross-chain operations.
 
 ## 🏗️ Architecture Overview
 
-Our platform consists of several interconnected components working together to provide a seamless yield farming experience:
+This platform consists of several interconnected components working together to provide a seamless yield farming experience:
 
 ```
 USER → WorldCoin App → Backend Server → Smart Contracts → Protocols (Morpho, AAVE, Fluid)
@@ -112,16 +72,6 @@ Connect & Verify     Yield Discovery   Cross-Chain Bridge
 - **AAVE V3**: Lending protocol with variable APY
 - **Morpho**: Optimized lending with higher yields
 - **Fluid**: Advanced liquidity protocol
-
-## 📋 Contract Addresses
-
-All official contract addresses are documented in the [`contract_addresses/`](./contract_addresses/) directory:
-
-- **Yield Manager Contracts**: Our main smart contracts on each chain
-- **CCTP Contracts**: Circle's Cross-Chain Transfer Protocol addresses
-- **DeFi Protocol Contracts**: AAVE, Morpho, and other protocol addresses
-
-See the [Contract Addresses README](./contract_addresses/README.md) for complete details.
 
 ## 🔄 CCTP Integration Deep Dive
 
@@ -223,6 +173,7 @@ sequenceDiagram
     WorldApp->>User: Success notification + Final amount received
 ```
 
+
 ### **4. Attestation Service**
 ```typescript
 interface AttestationMessage {
@@ -232,91 +183,4 @@ interface AttestationMessage {
   status: 'pending_confirmations' | 'complete';
 }
 
-// Poll Circle's API for attestation
-const getAttestation = async (txHash: string): Promise<AttestationMessage> => {
-  const response = await fetch(`https://iris-api.circle.com/v2/messages/${txHash}`);
-  return response.json();
-};
-```
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js (v18 or higher)
-- npm or yarn
-- MetaMask or compatible wallet
-- Circle Developer Account
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/your-username/world-app-defi.git
-cd world-app-defi
-
-# Install dependencies
-npm install
-
-# Set up environment variables
-cp .env.example .env
-# Edit .env with your API keys and contract addresses
-
-# Start development server
-npm run dev
-```
-
-## 🔧 Key Features
-
-### Cross-Chain USDC Transfers
-- Seamless transfers between supported chains
-- Automatic routing optimization
-- Real-time transaction tracking
-
-### Yield Optimization
-- Automated yield farming strategies
-- Integration with major DeFi protocols
-- Risk management and diversification
-
-### User Experience
-- Intuitive interface design
-- One-click cross-chain transfers
-- Comprehensive transaction history
-
-## 🛠️ Circle Developer Tools Used
-
-- **Circle APIs**: For USDC operations and account management
-- **CCTP Protocol**: For cross-chain transfers
-- **Circle SDKs**: For seamless integration
-- **Attestation Service**: For transaction verification
-
-## 📖 Additional Resources
-
-- [Circle Developer Documentation](https://developers.circle.com/)
-- [CCTP Protocol Guide](https://developers.circle.com/stablecoins/cctp)
-- [Contract Addresses](./contract_addresses/README.md)
-- [API Reference](./api/README.md)
-- [Smart Contract Documentation](./contracts/README.md)
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md) for details.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
-
-## 🎥 Demo Video
-
-[Link to demonstration video will be added here]
-
-## 📞 Contact
-
-For questions or support, please reach out to:
-- Email: [your-email@example.com]
-- Discord: [Your Discord]
-- Twitter: [@YourTwitter]
-
----
-
-*Built with ❤️ for the Circle CCTP2 Bounty Program*
